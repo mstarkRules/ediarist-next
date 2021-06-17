@@ -9,7 +9,7 @@ export interface TextFieldMaskProps extends OutlinedTextFieldProps {
 
 const TextFieldMask: React.FC<TextFieldMaskProps> = (props) => {
   return (
-    <InputMask mask={props.mask}>
+    <InputMask mask={props.mask} value={props.value} onChange={props.onChange}>
       {() => {
         return <TextField {...props} />;
       }}
